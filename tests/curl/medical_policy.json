@@ -1,0 +1,19 @@
+{
+    "policy" : {
+        "description" : "Policy controlling access to a patent's medical records",
+        "ruleCombiningAlg" : "permitOverrides",
+        "rules": [
+            {
+                "effect" : "Permit",
+                "description": "A patient can read his/her own medical record",
+                "rule" : "(Method in [GET]) and (Url % '.*/service/record/medical$') and (Resource.jpath('$..record.patient.patient-number') == Subject.attributes['patient-number'] )"
+            },
+            {
+                "effect" : "Permit",
+                "description": "A patient's own guardian or parent can read medical record as long as patient age is below 16",
+                "rule" : "(Method in [GET]) & ( (Resource.jpath('$..record.patient.parent') == Subject.attributes['parent'] ) | (Resource.jpath('$..record.patient.guardian-id') == Subject.attributes['guardian-id'] ) ) & (Resource.jpath('$..record.patient.age') < 16)"
+            }
+
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "policy": {
+
+        "ruleCombiningAlg" : "denyOverrides",
+        "description"      : "A policy controlling access to cloud servers API",
+        "rules" : [
+            {
+                "effect"      : "Permit",
+                "description" : "Permit GET on /tenants/{tenantId}/servers/{serverId} if the http header 'X-Tenant-Id' matches URL value for parameer tenantId",
+                "rule" : "(Method in [GET]) & (Url % '/tenants/{tenantId}/servers/{serverId}') & (Url['tenantId'] == Headers['X-Tenant-Id'])"
+            }
+        ]
+    }
+}

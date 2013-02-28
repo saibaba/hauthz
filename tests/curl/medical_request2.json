@@ -1,0 +1,19 @@
+{
+    "method" : "GET",
+    "url" : "https://medical.org/web/service/record/medical",
+    "subject" : { 
+        "attributes" :  {  
+            "parent" : "MPN-131abd",
+            "patient-number" : "MPN-031abf"
+        }
+    },
+    "resource" : {
+        "record": { 
+            "patient" : { 
+                "parent" : "MPN-131abd",
+                "patient-number" : "MPN-031abe" ,
+                "age" : 17
+            }
+        } 
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "policy": {
+
+        "ruleCombiningAlg" : "denyOverrides",
+        "description"      : "A policy controlling access to cloud servers API",
+        "rules" : [
+            {
+                "effect"      : "Permit",
+                "description" : "Permit GET on /servers/{serverId} if the subject's role is in 'Create' or 'Update' or 'Delete' or 'Read/Only'",
+                "rule" : "(Method in [GET]) and (Url / \".*/servers/[^/]+$\") and (Subject.role in ['Create', 'Update', 'Delete', 'Read/Only'])"
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "method" : "GET",
+    "url" : "/tenants/031abf-tenant1/servers/mywebserver123",
+    "headers" : { "X-Tenant-Id" : "031abf-tenant1" }
+}
