@@ -1,0 +1,6 @@
+{
+    "method" : "GET",
+    "url" : "http://medico.com/record/patient/BartSimpson",
+    "subject" : { "id" : "Julius Hibbert", "attributes" : { "some-attribute" : "riddle me that"} } 
+}
+

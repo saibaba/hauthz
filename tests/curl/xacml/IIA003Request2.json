@@ -1,0 +1,5 @@
+{
+    "method" : "GET",
+    "subject" : { "id" :  "Julius Hibbert", "attributes": { "bogus" : "Physician" } },
+    "url" : "http://medico.com/record/patient/BartSimpson"
+}

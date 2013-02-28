@@ -1,0 +1,13 @@
+{
+    "policy" : {
+        "description" : "Policy for Conformance Test IIA006.",
+        "ruleCombiningAlg" : "permitOverrides",
+        "rules": [
+            {
+                "effect" : "Permit",
+                "description" : "Julius Hibbert can read or write Bart Simpson's medical record.",
+                "rule" : "(Subject.id == 'Julius Hibbert') and (Subject.attributes['some-attribute'] == 'riddle me this' ) and (Url / '.*medico\\.com/record/patient/BartSimpson') and (Method in [GET, PUT])"
+            }
+        ]
+    }
+}

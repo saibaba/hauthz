@@ -1,0 +1,14 @@
+{
+    "policy" : {
+
+      "ruleCombiningAlg" : "denyOverrides",
+      "description" : "Policy for Conformance Test IIA002.",
+      "rules" : [
+          { 
+            "effect" : "Permit",
+            "description" : "A subject with a role attribute of \"Physician\" can read or write Bart Simpson's medical record.",
+            "rule" : "(Method in [GET, PUT]) and (Subject.role in ['Physician']) and (Url / '.*medico\\.com/record/patient/BartSimpson') "
+          }
+      ]
+    }
+}
